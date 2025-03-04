@@ -1,0 +1,92 @@
+.filters {
+  padding-left: 35px;
+  width: calc(100% - 50px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  // justify-content: space-between;
+
+  @media (max-width: 660px) {
+    padding-left: 12px;
+  }
+  .left {
+    min-width: 40%;
+    @media (max-width: 960px) {
+      min-width: 25%;
+    }
+    @media (max-width: 660px) {
+      min-width: 15%;
+    }
+    @media (max-width: 480px) {
+      min-width: 25%;
+    }
+  }
+  .right {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 300px));
+    align-items: center;
+    gap: 16px;
+    margin-right: 156px;
+    width: 60%;
+    @media (max-width: 960px) {
+      grid-template-columns: repeat(3, minmax(65px, 300px));
+      gap: 8px;
+      width: 75%;
+    }
+    @media (max-width: 660px) {
+      width: 85%;
+      grid-template-columns: repeat(3, minmax(48px, 300px));
+      gap: 4px;
+      margin-right: 87px;
+    }
+    @media (max-width: 480px) {
+      width: 75%;
+      justify-content: space-between;
+      display: flex;
+      gap: 16px;
+      margin-right: 25px;
+    }
+  }
+  .filter {
+    position: relative;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+
+    @media (max-width: 660px) {
+      gap: 4px;
+    }
+
+    .iconDiv {
+      display: flex;
+      align-items: center;
+    }
+    .icon {
+      // position: absolute;
+      // top: 5px;
+      // left: 40px;
+      cursor: pointer;
+      transition: transform 0.3s;
+
+      &.asc {
+        transform: rotate(0deg);
+      }
+
+      &.desc {
+        transform: rotate(180deg);
+      }
+    }
+    .iconName {
+      // position: absolute;
+      // top: 5px;
+      // left: 48px;
+      cursor: pointer;
+    }
+    .text {
+      color: #999999;
+      font-weight: 500;
+      font-size: 12px;
+    }
+  }
+}

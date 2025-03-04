@@ -1,0 +1,41 @@
+.wrapper {
+  position: relative;
+  margin-bottom: 64px;
+  font-size: 14px;
+  font-weight: 500;
+
+  @media (max-width: 660px) {
+    margin-bottom: 30px;
+  }
+  .icon {
+    position: absolute;
+    top: 18px;
+    left: 10px;
+  }
+  .input {
+    width: calc(100% - 50px);
+    padding: 16px 16px 16px 32px;
+    border: 1px solid #ebebeb;
+    color: #474747;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 15px;
+
+    @media (max-width: 380px) {
+      &::placeholder {
+        visibility: hidden;
+      }
+    }
+    &::placeholder {
+      color: #d1d1d1;
+    }
+  }
+  .resultText {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 400;
+    color: #d1d1d1;
+    top: 18px;
+    right: 10px;
+  }
+}
